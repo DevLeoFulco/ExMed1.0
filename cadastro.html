@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #fafafa; /* Adicionado para dar cor de fundo */
+      }
+
+      #elipselogin {
+        max-width: 400px;
+        width: 80%;
+        height: 510px;
+        padding: 40px;
+        border: 1px solid #b9b9b9;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.336);
+      }
+
+      .header {
+        margin-top: -40px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      #inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-left: -25px;
+      }
+
+      .input-box {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .input-box label {
+        font-size: 12px;
+        color: #5a5656;
+      }
+
+      .input-box input {
+        border: 1px solid #b9b9b9;
+        padding: 10px;
+        border-radius: 5px;
+        color: #606060;
+        width: 120%;
+        box-sizing: border-box;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #btnCancel,
+      #btnEnviar {
+        width: 48%;
+        height: 40px;
+        border-radius: 13px;
+        cursor: pointer;
+        border: 1px solid #b9b9b9;
+        color: #26baa9;
+      }
+
+      #btnEnviar {
+        background-color: #26baa9;
+        color: #ffffff;
+        border: 1px solid #26baa9;
+      }
+    </style>
+    <script src="cadastro.js"></script>
+    <title>Cadastro de Usuário</title>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="imag/elementodeco.png"
+        alt="logo da empresa"
+        class="background-image"
+      />
+    </header>
+
+    <div id="elipselogin">
+      <!-- Conteúdo da tela de cadastro -->
+      <form id="formCadastro">
+        <div class="header">
+          <h3>Cadastro de Usuário</h3>
+        </div>
+
+        <div id="inputs">
+          <div class="input-box">
+            <label for="nome">Nome *</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+
+          <div class="input-box">
+            <label for="codigoCliente">Código do Cliente *</label>
+            <input
+              type="text"
+              id="codigoCliente"
+              name="codigoCliente"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <label for="cpf">CPF *</label>
+            <input type="text" id="cpf" name="cpf" required />
+          </div>
+
+          <div class="input-box">
+            <label for="senha">Senha *</label>
+            <input type="password" id="senha" name="senha" required />
+          </div>
+
+          <div class="input-box">
+            <label for="confirmaSenha">Confirme a Senha *</label>
+            <input
+              type="password"
+              id="confirmaSenha"
+              name="confirmaSenha"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="button-container">
+          <button type="button" id="btnCancel">
+            <a href="telainicial.html">Cancelar</a>
+          </button>
+          <button type="submit" id="btnEnviar">Enviar</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

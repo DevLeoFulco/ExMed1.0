@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120vh;
+        margin: 0;
+        background-color: #fafafa; /* Adicionado para dar cor de fundo */
+      }
+
+      #elipsecadastro {
+        max-width: 800px;
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        border: 1px solid #b9b9b9;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.336);
+      }
+
+      #perfil-container {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start; /* Alinha os itens no topo */
+        margin-bottom: 15px;
+      }
+
+      #perfil-container img {
+        border: 1px solid #b9b9b9;
+        border-radius: 50%;
+        max-width: 100px;
+        max-height: 100px; /* Adiciona uma altura máxima para a imagem */
+        width: auto;
+        height: auto;
+      }
+
+      #perfil-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        max-width: 400px; /* Adiciona uma largura máxima para as informações do perfil */
+      }
+
+      #exmedcoins {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      #exmedcoins img {
+        width: 30px;
+        height: auto;
+        margin-right: 5px;
+      }
+
+      #campanhas-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .campanha-card {
+        max-width: 300px;
+        width: 100%;
+        padding: 20px;
+        border: 1px solid #b9b9b9;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.336);
+      }
+      .campanha-card-img{
+        width: 300px;
+      }
+
+      .campanha-modal-img{
+        width: 800px;
+      }
+      .coins img {
+       width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+      }
+
+      .coins p {
+        font-size: 20px; /* Ajuste o tamanho da fonte do parágrafo conforme necessário */
+        margin-left: 10px; /* Adicione um espaçamento à esquerda para separar a imagem do texto */
+      }
+    </style>
+    <title>Perfil do Usuário</title>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="imag/elementodeco.png"
+        alt="logo da empresa"
+        class="background-image"
+      />
+    </header>
+
+    <div id="elipsecadastro">
+      <!-- Conteúdo da tela do usuário logado -->
+      <div id="perfil-container">
+        <img src="imag/Dev Leo Fulco.jpg" alt="Foto do Usuário" />
+        <div id="perfil-info">
+          <h3>Nome de Usuário</h3>
+          <h4>Leandresson Cleiton Moreira Fulco</h4>
+          <h5>COD.Cliente: EX25M25</h5>
+          <p>Email: devleofulco@teste.com</p>
+          <!-- Adicione mais informações do perfil do usuário conforme necessário -->
+        </div>
+      </div>
+
+      <div id="exmedcoins" class="coins">
+        <img src="imag/exMedCoins.png" alt="Ícone ExMedCoins" />
+        <p>200 ExMedCoins</p>
+      </div>
+
+      <h3>Campanhas Participadas</h3>
+
+      <div id="campanhas-container">
+        <div class="campanha-card">
+          <img src="imag/CAMPANHA 1.png" alt="Campanha 1" class="campanha-card-img"/>
+          <h4>INDIQUE E GANHE</h4>
+          <p>A cada novo usuário indicado você ganha ExMedcoins para acumular</p>
+          <button class="detalhes-btn" onclick="abrirDetalhesModal('imag/CAMPANHA 1.png', 'INDIQUE E GANHE', 'Sempre que um novo usuário for cadastrado utilizando seu link de indicação e utiliar o primeiro serviço em nossa plataforma ExMed, a pessoa indicadora recebe 20 ExMedCoins para usar como quiser e seu indicado, recebe 60 ExMedCoins para usar como quiser também. E a cada novo indicado, novos ExmedCoins serão acumulados.')">Detalhes</button>
+        </div>
+      
+        <div class="campanha-card">
+          <img src="imag/CAMPANHA 2.png" alt="Campanha 2" class="campanha-card-img" />
+          <h4>OUTUBRO ROSA</h4>
+          <p>No mês das mulheres, cada usuária cadastrada recebe bônus e descontos em serviços</p>
+          <button class="detalhes-btn" onclick="abrirDetalhesModal('imag/CAMPANHA 2.png', 'Outubro Rosa', 'O Outubro Rosa é uma campanha mundial de conscientização sobre o câncer de mama. É possível prevenir ou minimizar seus efeitos fazendo o autoexame e a ExMed vem apoiando essa campanha oferecendo super descontos e bônus de ExMedCoin para cada nova guerreira que enfrentar essa luta conosco.')">Detalhes</button>
+        </div>
+      
+        <!-- Espaço para adicionar mais cards-->
+      </div>
+      
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="fecharModal()">&times;</span>
+          <div id="detalhes-campanha">
+            <img id="campanha-imagem" src="imag/CAMPANHA 1.png" alt="Imagem da Campanha" class="campanha-modal-img" />
+            <h2 id="campanha-titulo"></h2>
+            <p id="campanha-descricao"></p>
+          </div>
+        </div>
+      </div>
+      
+
+        <!-- Tambem podemos adicionar mais cards aqui -->
+      </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/cardCampanha.js"></script>
+    <script src="js/modalCampanha.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>editar promocao</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="imag/elementodeco.png"
+        alt="logo da empresa"
+        class="background-image"
+      />
+    </header>
+    <div class="containeredit">
+      <form>
+        <div class="header">
+          <h3>Editar Promoção</h3>
+          <label for="status" class="status-label">Status:</label>
+          <img
+            src="imag/bolinhaStatus.png"
+            alt="bolinhadodesativado"
+            class="bolinha"
+          />
+          <span class="status-text">Ativa</span>
+        </div>
+        <div class="input-group">
+          <label for="name">Nome da promoção *</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <br /><br />
+        <div class="date-container">
+          <div class="start-date">
+            <label for="start-date">Data de início *</label>
+            <input type="date" id="start-date" name="start-date" />
+          </div>
+          <div class="end-date">
+            <label for="end-date">Data de término *</label>
+            <input type="date" id="end-date" name="end-date" />
+          </div>
+        </div>
+        <label for="description">Descrição</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="10"
+          cols="50"
+        ></textarea>
+        <br /><br />
+        <div class="button-container">
+          <button type="submit" class="btn" id="btnVoltar">Voltar</button>
+          <button type="submit" class="next-btn" id="btnProximo">Próximo</button>
+        </div>
+      </form>
+    </div>
+    <script src="js/editarpromo.js" defer></script>
+  </body>
+</html>

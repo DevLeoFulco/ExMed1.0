@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Adição</title>
+  </head>
+
+  <body>
+    <div id="elipse">
+      <img src="imag/logo maior sem fundo 2.png" alt="exmed" />
+    </div>
+
+    <form action="dados.html" method="post" id="formadicao">
+      <div class="npk1">
+        <h3>Adicionando promoção</h3>
+        <label>Nome da promoção * </label
+        ><input type="text" name="nomepromocao" size="70" />
+        <br />
+        <label>Data de início * </label><input type="date" />
+        <label>Data de término * </label><input type="date" />
+        <br />
+        <label>Descrição: </label>
+        <br />
+        <textarea style="width: 790px" id="textareaadicao"></textarea>
+        <br />
+        <label>Qtd. mínima de pontos * </label
+        ><input type="number" required="" name="quantidademinima" />
+        <br />
+        <label>Meta de participantes * </label
+        ><input type="number" required="" name="metadeparticipantes" />
+        <br />
+        <div class="buttonadicao">
+          <button type="button" id="btnVoltar">Voltar</button>
+          <button type="button" id="btnConcluir">Concluído</button>
+        </div>
+      </div>
+    </form>
+  </body>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/adicionarPromo.js"></script>
+</html>
